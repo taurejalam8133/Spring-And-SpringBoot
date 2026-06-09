@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- YearService Bean -->
+    <bean id="yearService" class="com.nt.task02.YearService"/>
+
+    <!-- Checker Bean -->
+    <bean id="checker" class="com.nt.task02.NewYearChecker">
+        <property name="yearService" ref="yearService"/>
+    </bean>
+
+</beans>
